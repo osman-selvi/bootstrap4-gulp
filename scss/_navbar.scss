@@ -1,0 +1,55 @@
+.navbar {
+  .menu {
+    text-align: center;
+    padding: 0;
+    overflow: hidden;
+
+    @include media-breakpoint-up(lg) {
+      text-align: left;
+    }
+
+    .logo {
+      i {
+        @include media-breakpoint-up(lg) {
+          display: none;
+        }
+      }
+    }
+
+    .navbar-list {
+      list-style: none;
+      padding: 0;
+      display: none;
+
+      &.active {
+        display: block;
+      }
+
+      @include media-breakpoint-up(lg) {
+        display: block;
+        float:right;
+      }
+
+
+      .navbar-list-item {
+        background: $brown;
+        padding: 10px;
+        margin-bottom: 10px;
+        @include media-breakpoint-up(lg) {
+          float: left;
+        }
+        
+        a {
+          color: $white;
+        }
+      }
+      
+    }
+
+  }
+
+  @include media-breakpoint-up(lg) {
+      background: #ccc;
+  }
+}
+
